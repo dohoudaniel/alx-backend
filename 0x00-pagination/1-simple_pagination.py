@@ -64,7 +64,7 @@ class Server:
         try:
             # Loading from the dataset
             start_index, final_index = index_range(page, page_size)
-            fetchedData = index_range[start_index:final_index]
+            fetchedData = dataset[start_index:final_index]
             return fetchedData
         except IndexError: # If out of range
             # Return an empty list if out of range
