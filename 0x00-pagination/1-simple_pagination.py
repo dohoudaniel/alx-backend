@@ -12,7 +12,7 @@ for those particular pagination parameters.
 import csv
 import math
 from typing import Tuple  # For Type annotations
-from typing import List # For Type Annotations
+from typing import List  # For Type Annotations
 
 
 def index_range(page: int, page_size: int) -> Tuple:
@@ -66,7 +66,7 @@ class Server:
             start_index, final_index = index_range(page, page_size)
             fetchedData = dataset[start_index:final_index]
             return fetchedData
-        except IndexError: # If out of range
+        except IndexError:  # If out of range
             # Return an empty list if out of range
             return []
         # pass
