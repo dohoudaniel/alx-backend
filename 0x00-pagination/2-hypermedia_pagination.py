@@ -82,7 +82,7 @@ class Server:
         # Reloading get_page to fetch the dataset
         data = self.get_page(page, page_size)
         # The total_pages value
-        total_pages = len(self.dataset()) / page_size
+        total_pages = math.ceil(len(self.dataset()) / page_size)
         # Getting the start_index and final_index
         start_index, final_index = index_range(page, page_size)
         #
