@@ -13,4 +13,4 @@ Some of the concepts I learned are:
 - Using datasets
 
 
-ChatGPT helped too in learning these concepts
+ChatGPT helped too in learning these concepts.
