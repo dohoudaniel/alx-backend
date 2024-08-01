@@ -9,7 +9,7 @@ for those particular pagination parameters.
 
 
 # Import statements
-from typing import Tuple # For Type annotations
+from typing import Tuple  # For Type annotations
 
 
 def index_range(page: int, page_size: int) -> Tuple:
