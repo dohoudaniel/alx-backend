@@ -32,13 +32,14 @@ class FIFOCache(BaseCaching):
         """
         if key is None or item is None:
             pass
-        elif len(self.cache_data) >= BaseCaching.MAX_ITEMS \
-            or not key in self.cache_data.keys():
-            listOfCacheKeys = list(iter(self.cache_data.keys()))
-            firstKey = listOfCacheKeys[0]
-            del self.cache_data[firstKey]
-            print(f"DISCARD: {firstKey}")
         else:
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS \
+            or not key in self.cache_data.keys():
+                listOfCacheKeys = list(iter(self.cache_data.keys()))
+                firstKey = listOfCacheKeys[0]
+                del self.cache_data[firstKey]
+                print(f"DISCARD: {firstKey}")
+
             self.cache_data[key] = item
 
     def get(self, key):
