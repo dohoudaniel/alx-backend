@@ -34,7 +34,7 @@ class FIFOCache(BaseCaching):
             pass
         else:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS \
-            or not key in self.cache_data.keys():
+                and not key in self.cache_data.keys():
                 # listOfCacheKeys = list(iter(self.cache_data.keys()))
                 # firstKey = listOfCacheKeys[0]
                 firstKey = next(iter(self.cache_data.keys()))
