@@ -12,7 +12,7 @@ from base_caching import BaseCaching
 # maxItems = BaseCaching.MAX_ITEMS
 
 
-class FIFOCache(BaseCaching):
+class LIFOCache(BaseCaching):
     """
     Acts as a Cache but
     using the FIFO method
