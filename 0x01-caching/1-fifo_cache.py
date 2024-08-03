@@ -32,7 +32,8 @@ class FIFOCache(BaseCaching):
         """
         if key is None or item is None:
             pass
-        elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        elif len(self.cache_data) > BaseCaching.MAX_ITEMS \
+            or not key in self.cache_data.keys():
             listOfCacheKeys = list(self.cache_data.keys())
             firstKey = listOfCacheKeys[0]
             del self.cache_data[firstKey]
