@@ -9,7 +9,7 @@ from BaseCaching and is a caching system
 from base_caching import BaseCaching
 
 # Maximum items from the BaseCaching class
-maxItems = BaseCaching.MAX_ITEMS
+# maxItems = BaseCaching.MAX_ITEMS
 
 
 class FIFOCache(BaseCaching):
@@ -32,7 +32,7 @@ class FIFOCache(BaseCaching):
         """
         if key is None or item is None:
             pass
-        elif len(self.cache_data) > maxItems:
+        elif len(self.cache_data) > BaseCaching.MAX_ITEMS:
             listOfCacheKeys = list(self.cache_data.keys())
             firstKey = listOfCacheKeys[0]
             del self.cache_data[firstKey]
